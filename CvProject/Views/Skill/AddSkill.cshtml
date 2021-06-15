@@ -1,0 +1,23 @@
+﻿@model CvProject.Models.Entity.Skill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Yetenek Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px">
+        <label>Yetenek Adı</label>
+        <input type="text" class="form-control" name="SkillName" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Yetenek Derecesi</label>
+        <input type="text" class="form-control" name="Rating" required />
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Yeni Yetenek Ekle</button>
+    </div>
+</form>
+

@@ -1,0 +1,21 @@
+﻿@using CvProject.Models.Entity
+@model List<About>
+
+@foreach (var x in Model)
+{
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+
+            <h1 class="mb-0">
+                @x.Name
+                <span class="text-primary">@x.Surname</span>
+            </h1>
+            <div class="subheading mb-5">
+                @x.Address · @x.Phone ·
+                <a href="mailto:samedkutahyali19@email.com">@x.Mail</a>
+            </div>
+            <p class="lead mb-5">@x.Explanation.</p>
+            @Html.Action("SocialMedia","Default")
+        </div>
+    </section>
+}

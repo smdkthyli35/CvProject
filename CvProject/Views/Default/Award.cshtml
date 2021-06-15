@@ -1,0 +1,17 @@
+﻿@using CvProject.Models.Entity
+@model List<Award> 
+
+<section class="resume-section" id="awards">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Sertİfİkalarım</h2>
+        @foreach (var x in Model)
+        {
+        <ul class="fa-ul mb-1">
+            <li>
+                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                @x.AwardName
+            </li>
+        </ul>
+        }
+    </div>
+</section>

@@ -1,0 +1,46 @@
+﻿@using CvProject.Models.Entity
+@model List<Interest>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Hobilerim</h2>
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Hobi Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.InterestName</td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="/Interest/DeleteInterest/@x.Id">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/Interest/UpdateInterest/@x.Id">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Interest/AddInterest/" class="btn btn-primary">Yeni Hobi Ekle</a>

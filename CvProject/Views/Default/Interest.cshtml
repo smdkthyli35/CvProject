@@ -1,0 +1,17 @@
+﻿@using CvProject.Models.Entity
+@model List<Interest>
+
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Hobİlerİm</h2>
+        <ul class="fa-ul mb-0">
+            @foreach (var x in Model)
+            {
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    <p class="mb-3">@x.InterestName</p>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

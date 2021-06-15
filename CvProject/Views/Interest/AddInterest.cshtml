@@ -1,0 +1,19 @@
+﻿@model CvProject.Models.Entity.Interest
+@{
+    ViewBag.Title = "AddInterest";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Hobi Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:30px">
+        @Html.Label("Hobi Adı")
+        @Html.TextBoxFor(x => x.InterestName, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Yeni Hobi Ekle</button>
+    </div>
+</form>
+

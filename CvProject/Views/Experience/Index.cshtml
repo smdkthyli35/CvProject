@@ -1,0 +1,52 @@
+﻿@using CvProject.Models.Entity
+@model List<Experience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Deneyimlerim</h2>
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BAŞLIK</th>
+            <th>ALT BAŞLIK</th>
+            <th>TARİH</th>
+            <th>SİL</th>
+            <th>DÜZENLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Title</td>
+            <td>@x.Subtitle</td>
+            <td>@x.Date</td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="/Experience/DeleteExperience/@x.Id">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/Experience/BringExperience/@x.Id">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+            </td>
+            @*<td><a href="/Experience/DeleteExperience/@x.Id" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Experience/BringExperience/@x.Id" class="btn btn-success">DÜZENLE</a></td>*@
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("AddExperience","Experience")" class="btn btn-primary">Yeni Deneyim Ekle</a>
+

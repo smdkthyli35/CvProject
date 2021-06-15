@@ -1,0 +1,32 @@
+﻿@model CvProject.Models.Entity.Experience
+
+@{
+    ViewBag.Title = "AddExperience";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Deneyim Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px">
+        <label>Deneyim Başlık</label>
+        <input type="text" class="form-control" name="Title" required />
+    </div>
+    <div style="margin-bottom:15px">
+        <label>Deneyim Altbaşlık</label>
+        <input type="text" class="form-control" name="Subtitle" required />
+    </div>
+    <div style="margin-bottom:15px">
+        <label>Deneyim Tarih</label>
+        <input type="text" class="form-control" name="Date" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Deneyim Detay</label>
+        <textarea class="form-control" name="Details" rows="5" required></textarea>
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Yeni Deneyim Ekle</button>
+    </div>
+</form>
+

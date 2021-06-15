@@ -1,0 +1,65 @@
+﻿@using CvProject.Models.Entity
+@model List<Award>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <!--<div class="card-header p-2">
+
+                        </div>-->
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var x in Model)
+                                    {
+                                        <!-- timeline time label -->
+                                        <div class="time-label">
+                                            <a href="/Award/BringAward/@x.Id" class="btn btn-success">
+                                                <span class="bg-success">
+                                                    @x.Date
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            @*<i class="fas fa-comment bg-primary"></i>*@
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.AwardName
+                                                </div>
+                                                @*<div class="timeline-footer">
+                                                        <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
+                                                        <a href="#" class="btn btn-danger btn-sm">Sil</a>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <a href="/Award/AddAward/" class="btn btn-primary">Yeni Sertifika Ekle</a>
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</body>
+</html>

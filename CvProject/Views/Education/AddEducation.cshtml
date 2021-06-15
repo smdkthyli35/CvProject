@@ -1,0 +1,35 @@
+﻿@model CvProject.Models.Entity.Education
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Eğitim Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px">
+        <label>Başlık</label>
+        <input type="text" class="form-control" name="Title" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Altbaşlık</label>
+        <input type="text" class="form-control" name="Subtitle" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Departman</label>
+        <input type="text" class="form-control" name="Department"  />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Genel Not Ortalaması (GNO)</label>
+        <input type="text" class="form-control" name="GPA" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Tarih</label>
+        <input type="text" class="form-control" name="Date" required />
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Yeni Eğitim Ekle</button>
+    </div>
+</form>
+

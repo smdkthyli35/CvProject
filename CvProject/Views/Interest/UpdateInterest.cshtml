@@ -1,0 +1,23 @@
+﻿@model CvProject.Models.Entity.Interest
+
+@{
+    ViewBag.Title = "UpdateInterest";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Hobi Düzenleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("UpdateInterest", "Interest", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+
+    <div style="margin-bottom:30px">
+        @Html.Label("Hobi Adı")
+        @Html.TextBoxFor(x => x.InterestName, new { @class = "form-control", required = "required" })
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+}
+

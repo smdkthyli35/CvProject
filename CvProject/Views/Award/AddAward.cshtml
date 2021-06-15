@@ -1,0 +1,25 @@
+﻿@model CvProject.Models.Entity.Award
+
+@{
+    ViewBag.Title = "AddAward";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Sertifika Ekleme Sayfası</h2>
+
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px">
+        <label>Sertifika Adı</label>
+        <input type="text" class="form-control" name="AwardName" required />
+    </div>
+    <div style="margin-bottom:30px">
+        <label>Sertifika Veriliş Tarihi</label>
+        <input type="text" class="form-control" name="Date" required />
+    </div>
+    <div style="margin-bottom:15px">
+        <button class="btn btn-info">Yeni Sertifika Ekle</button>
+    </div>
+</form>
+
